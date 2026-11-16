@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kartick-speedtest.pages.dev/sitemap.xml
