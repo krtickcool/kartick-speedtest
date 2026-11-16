@@ -131,4 +131,13 @@ $('clear').onclick=()=>{if(confirm('Delete all saved speed-test history from thi
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));['test','history','info'].forEach(k=>$('view-'+k).classList.toggle('hidden',k!==b.dataset.tab));if(b.dataset.tab==='history')updateHistory()});
 function networkInfo(){const n=navigator.connection||navigator.mozConnection||navigator.webkitConnection;$('browser').textContent=navigator.userAgent.includes('Edg')?'Microsoft Edge':navigator.userAgent.includes('Chrome')?'Chrome':navigator.userAgent.includes('Firefox')?'Firefox':'Browser';$('os').textContent=navigator.userAgentData?.platform||navigator.platform||'Not available';$('ctype').textContent=n?.type||'Not exposed by browser';$('downlink').textContent=n?.downlink?n.downlink+' Mbps':'Not exposed';$('effective').textContent=n?.effectiveType||'Not exposed';$('online').textContent=navigator.onLine?'Online':'Offline';$('screen').textContent=screen.width+' × '+screen.height;$('localtime').textContent=new Date().toLocaleString()}
 networkInfo();window.addEventListener('online',networkInfo);window.addEventListener('offline',networkInfo);updateHistory();
-</script></body></html>
+</script><footer style="text-align:center;padding:22px 10px;margin-top:25px;font-size:14px;color:#738ba8;">
+  <p>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About Us</a> |
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="contact.html">Contact Us</a>
+  </p>
+  <p>© 2026 Kartick's Network Toolkit. All rights reserved.</p>
+</footer>
+</body></html>
